@@ -1712,7 +1712,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
   window.addEventListener("orientationchange", function(){ setTimeout(function(){ for(var i=0;i<stories.length;i++) stories[i].seq.resize(); refreshGallery(); }, 260); });
 
   /* =========================================================
-     8. LIGHTBOX  (32 images + 6 video loops)
+     8. LIGHTBOX  (32 images + 4 video loops)
      ========================================================= */
   var items = [];
   $$(".gcard__btn").forEach(function(btn){
@@ -1728,10 +1728,8 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
   [
     ["loop-bedroom.mp4","loop-bedroom.jpg","غرفة نوم على القياس","A bedroom to measure"],
     ["loop-living.mp4","loop-living.jpg","جلسة عائلية","A family living room"],
-    ["loop-curtain.mp4","loop-curtain.jpg","ستائر في الحركة","Drapes in motion"],
     ["loop-fabric.mp4","loop-fabric.jpg","أقمشة وخامات","Fabrics &amp; finishes"],
-    ["loop-wood.mp4","loop-wood.jpg","تفاصيل خشبية","Wood detailing"],
-    ["loop-chandelier.mp4","loop-chandelier.jpg","إضاءة وديكور","Lighting &amp; décor"]
+    ["loop-wood.mp4","loop-wood.jpg","تفاصيل خشبية","Wood detailing"]
   ].forEach(function(v){
     items.push({ type:"vid", src:"assets/video/"+v[0], poster:"assets/poster/"+v[1], ar:v[2], en:v[3] });
   });
