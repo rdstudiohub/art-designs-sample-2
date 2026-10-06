@@ -9,7 +9,7 @@
 <meta property="og:title" content="فن التصاميم | ART DESIGNS — الدمام">
 <meta property="og:description" content="أثاث وخزائن وستائر وديكورات تُفصَّل على قياسك. ورشة خاصة في الدمام، زيارة وقياس مجاني، وضمان التركيب.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/img/curtain_panel.jpg">
+<meta property="og:image" content="assets/img/curtain_panel.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
   "name": "فن التصاميم — ART DESIGNS",
   "alternateName": "ART DESIGNS",
   "description": "متخصصون في صناعة الأثاث والخزائن والديكورات — تفصيل الأثاث المخصص، الخزائن والأبواب، الستائر والبرادي، الديكورات والمشربيات، والتنجيد والتجديد في الدمام.",
-  "image": "assets/img/curtain_panel.jpg",
+  "image": "assets/img/curtain_panel.webp",
   "telephone": "+966532387652",
   "founder": "عبد الله علي المزنعي",
   "address": {"@type": "PostalAddress", "streetAddress": "شارع الضهران، كبري الملك فهد", "addressLocality": "الدمام", "addressRegion": "المنطقة الشرقية", "postalCode": "31146", "addressCountry": "SA"},
@@ -172,8 +172,8 @@ html[lang="en"] .brand__en{font-family:var(--f-ar);font-size:.74rem;letter-spaci
 /* ============================================================
    HERO
    ============================================================ */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;padding-block:114px 84px;background:var(--bg)}
-.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.68;filter:saturate(.94) brightness(1.04)}
+.hero{position:relative;min-height:auto;display:flex;align-items:center;overflow:hidden;isolation:isolate;padding-block:clamp(92px,11vh,112px) clamp(46px,6vh,64px);background:var(--bg)}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.9;filter:saturate(.96) brightness(1.03)}
 .hero__scrim{position:absolute;inset:0;z-index:1;background:
   linear-gradient(to bottom,rgba(251,248,243,.72) 0%,rgba(251,248,243,.56) 40%,rgba(251,248,243,.84) 80%,#FBF8F3 100%),
   radial-gradient(120% 92% at 74% 16%,rgba(251,248,243,.22) 0%,rgba(251,248,243,.68) 72%)}
@@ -237,7 +237,7 @@ html[lang="ar"] .hero__scroll span{letter-spacing:.04em}
    HORIZONTAL GALLERY (pinned)
    ============================================================ */
 .hgal{position:relative;background:var(--bg-2);border-block:1px solid var(--line);overflow:clip}
-.hgal__pin{position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;gap:clamp(13px,2.4vh,28px);overflow:hidden;padding-block:86px 30px}
+.hgal__pin{position:relative;height:auto;display:flex;flex-direction:column;gap:clamp(11px,1.8vh,20px);padding-block:clamp(46px,7vh,72px) clamp(30px,4.6vh,48px)}
 html.has-gsap .hgal__pin{position:relative}
 .hgal__head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
 .hgal__head .sec__title{margin-block-start:8px;font-size:clamp(1.5rem,3.1vw,2.4rem)}
@@ -245,13 +245,14 @@ html.has-gsap .hgal__pin{position:relative}
 .hgal__hint{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;color:var(--muted);letter-spacing:.06em;white-space:nowrap}
 .hgal__hint i{width:52px;height:1px;background:linear-gradient(90deg,var(--amber),transparent);position:relative;display:block}
 html[dir="rtl"] .hgal__hint i{background:linear-gradient(270deg,var(--amber),transparent)}
-.hgal__bar{width:min(240px,50vw);height:2px;background:rgba(30,27,22,.1);border-radius:2px;overflow:hidden}
+.hgal__bar{width:min(240px,50vw);height:2px;background:rgba(30,27,22,.1);border-radius:2px;overflow:hidden;margin-inline:var(--pad);align-self:center}
 .hgal__bar i{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--amber)}
 html[dir="rtl"] .hgal__bar i{transform-origin:100% 50%}
-.hgal__track{display:flex;gap:clamp(12px,1.6vw,20px);padding-inline:var(--pad);will-change:transform;align-items:stretch;width:max-content;align-self:flex-start}
-.gcard{flex:0 0 auto;width:clamp(196px,23vw,300px);margin:0}
+.hgal__track{display:flex;gap:clamp(12px,1.6vw,20px);padding:2px var(--pad) 14px;align-items:stretch;width:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none}
+.hgal__track::-webkit-scrollbar{display:none}
+.gcard{flex:0 0 auto;width:min(78vw,330px);margin:0;scroll-snap-align:center}
 .gcard__btn{display:block;width:100%;text-align:start;padding:0;border:0;background:none;cursor:pointer}
-.gcard__im{position:relative;display:block;aspect-ratio:4/5;max-height:47svh;border-radius:var(--r-lg);overflow:hidden;background:var(--bg-3);box-shadow:var(--shadow-s)}
+.gcard__im{position:relative;display:block;aspect-ratio:4/5;max-height:58svh;border-radius:var(--r-lg);overflow:hidden;background:var(--bg-3);box-shadow:var(--shadow-s)}
 .gcard__im img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .gcard__btn:hover .gcard__im img{transform:scale(1.07)}
 .gcard__im::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,17,12,.5) 0%,rgba(20,17,12,0) 46%);opacity:.9;transition:opacity .5s var(--ease)}
@@ -474,7 +475,7 @@ html[lang="ar"] .foot__t{font-family:var(--f-ar);text-transform:none;letter-spac
 }
 @media (max-width:640px){
   .svc,.coll,.stats,.why__grid{grid-template-columns:1fr}
-  .hero{padding-block:104px 80px}
+  .hero{padding-block:clamp(84px,10vh,104px) clamp(38px,5vh,56px)}
   .hero__cta .pill{width:100%}
   .btn__lbl{display:inline}
 }
@@ -498,6 +499,20 @@ html.no-motion .story__cap:not(.is-on){display:none}
 html.no-motion .story__load{display:none}
 html.no-motion .gcard__btn:hover .gcard__im img,
 html.no-motion .coll__card:hover .coll__im img{transform:none}
+
+/* ---------- no pinning anywhere: stories are compact bands, gallery is a swipe row ---------- */
+.story{height:auto !important;min-height:0 !important}
+.story__sticky{position:relative !important;top:auto !important;height:auto !important;display:block !important;overflow:visible !important}
+.story__cv{display:none !important}
+.story__still{display:block;width:100%;height:min(46svh,420px);object-fit:cover}
+.story__scrim{display:none !important}
+.story__tag{position:static !important;display:inline-flex;margin:14px var(--pad) 0 !important}
+.story__ui{position:static !important;display:block !important;padding:16px var(--pad) 26px !important;pointer-events:auto !important}
+.story__caps{display:grid !important;gap:14px}
+.story__cap{grid-area:auto !important;opacity:1 !important;transform:none !important;max-width:min(680px,100%) !important;pointer-events:auto !important}
+.story__load{display:none !important}
+html.no-motion .story{height:auto !important}
+@media (min-width:900px){ .gcard{width:clamp(240px,24vw,340px)} }
 </style>
 </head>
 <body>
@@ -546,9 +561,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
 <main id="main">
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="hero">
-  <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="assets/poster/loop-bedroom.jpg" aria-hidden="true">
-    <source src="assets/video/loop-bedroom.mp4" type="video/mp4">
-  </video>
+  <img class="hero__video" src="assets/poster/loop-bedroom.webp" alt="" aria-hidden="true" width="1600" height="900" fetchpriority="high" decoding="async">
   <div class="hero__scrim" aria-hidden="true"></div>
   <canvas class="hero__blobs" id="blobCanvas" aria-hidden="true"></canvas>
   <div class="hero__inner">
@@ -658,131 +671,131 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
     <div class="hgal__bar" aria-hidden="true"><i id="galBar"></i></div>
     <div class="hgal__track" id="galTrack" role="list">
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="0" aria-label="Luxury majlis curtains">
-        <span class="gcard__im"><img src="assets/img/curtain_panel.jpg" alt="مجلس بستائر فاخرة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/curtain_panel.webp" alt="مجلس بستائر فاخرة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مجلس بستائر فاخرة" data-en="Luxury majlis curtains">مجلس بستائر فاخرة</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="1" aria-label="Layered bedroom curtains">
-        <span class="gcard__im"><img src="assets/img/curtain_bedroom.jpg" alt="ستائر غرفة النوم" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/curtain_bedroom.webp" alt="ستائر غرفة النوم" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="ستائر غرفة النوم" data-en="Layered bedroom curtains">ستائر غرفة النوم</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="2" aria-label="Olive and cream drapes">
-        <span class="gcard__im"><img src="assets/img/curtains_olive.jpg" alt="ستائر زيتوني وكريمي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/curtains_olive.webp" alt="ستائر زيتوني وكريمي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="ستائر زيتوني وكريمي" data-en="Olive &amp; cream drapes">ستائر زيتوني وكريمي</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="3" aria-label="Roller and zebra blinds">
-        <span class="gcard__im"><img src="assets/img/blinds_modern.jpg" alt="ستائر رول" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/blinds_modern.webp" alt="ستائر رول" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="ستائر رول" data-en="Roller &amp; zebra blinds">ستائر رول</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="4" aria-label="Sheer curtains">
-        <span class="gcard__im"><img src="assets/img/curtains_sheer.jpg" alt="ستائر شفافة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/curtains_sheer.webp" alt="ستائر شفافة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="ستائر شفافة" data-en="Sheer curtains">ستائر شفافة</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="5" aria-label="Office blinds">
-        <span class="gcard__im"><img src="assets/img/blinds_office.jpg" alt="برادي مكتبية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/blinds_office.webp" alt="برادي مكتبية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="برادي مكتبية" data-en="Office blinds">برادي مكتبية</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="6" aria-label="Curtain detailing">
-        <span class="gcard__im"><img src="assets/img/curtain_detail.jpg" alt="تفاصيل الستائر" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/curtain_detail.webp" alt="تفاصيل الستائر" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ستائر" data-en="Curtains">ستائر</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="تفاصيل الستائر" data-en="Curtain detailing">تفاصيل الستائر</span><span class="gcard__c" data-ar="ستائر" data-en="Curtains">ستائر</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="7" aria-label="Bespoke wardrobe">
-        <span class="gcard__im"><img src="assets/img/wood_wardrobe.jpg" alt="خزانة مخصصة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wood_wardrobe.webp" alt="خزانة مخصصة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="خزانة مخصصة" data-en="Bespoke wardrobe">خزانة مخصصة</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="8" aria-label="Walk-in dressing room">
-        <span class="gcard__im"><img src="assets/img/wardrobe_walkin.jpg" alt="غرفة ملابس" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wardrobe_walkin.webp" alt="غرفة ملابس" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="غرفة ملابس" data-en="Walk-in dressing room">غرفة ملابس</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="9" aria-label="Display cabinet">
-        <span class="gcard__im"><img src="assets/img/wood_cabinet.jpg" alt="خزانة عرض" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wood_cabinet.webp" alt="خزانة عرض" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="خزانة عرض" data-en="Display cabinet">خزانة عرض</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="10" aria-label="Bespoke wood kitchen">
-        <span class="gcard__im"><img src="assets/img/kitchen_wood_full.jpg" alt="مطبخ خشبي مخصص" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/kitchen_wood_full.webp" alt="مطبخ خشبي مخصص" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مطبخ خشبي مخصص" data-en="Bespoke wood kitchen">مطبخ خشبي مخصص</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="11" aria-label="Wood kitchen">
-        <span class="gcard__im"><img src="assets/img/kitchen_wood.jpg" alt="مطبخ خشبي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/kitchen_wood.webp" alt="مطبخ خشبي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مطبخ خشبي" data-en="Wood kitchen">مطبخ خشبي</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="12" aria-label="Pale oak wardrobe">
-        <span class="gcard__im"><img src="assets/img/wardrobe_white_oak.jpg" alt="خزانة بلوط فاتح" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wardrobe_white_oak.webp" alt="خزانة بلوط فاتح" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="خزانة بلوط فاتح" data-en="Pale oak wardrobe">خزانة بلوط فاتح</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="13" aria-label="Office joinery">
-        <span class="gcard__im"><img src="assets/img/office_joinery.jpg" alt="أعمال خشبية للمكاتب" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/office_joinery.webp" alt="أعمال خشبية للمكاتب" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="خزائن" data-en="Wardrobes">خزائن</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="أعمال خشبية للمكاتب" data-en="Office joinery">أعمال خشبية للمكاتب</span><span class="gcard__c" data-ar="خزائن" data-en="Wardrobes">خزائن</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="14" aria-label="Custom wooden bed">
-        <span class="gcard__im"><img src="assets/img/wooden_bed.jpg" alt="سرير خشبي مخصص" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wooden_bed.webp" alt="سرير خشبي مخصص" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="سرير خشبي مخصص" data-en="Custom wooden bed">سرير خشبي مخصص</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="15" aria-label="Master bedroom">
-        <span class="gcard__im"><img src="assets/img/bed_master_wood.jpg" alt="غرفة نوم رئيسية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/bed_master_wood.webp" alt="غرفة نوم رئيسية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="غرفة نوم رئيسية" data-en="Master bedroom">غرفة نوم رئيسية</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="16" aria-label="Guest bedroom">
-        <span class="gcard__im"><img src="assets/img/bed_guest.jpg" alt="غرفة ضيوف" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/bed_guest.webp" alt="غرفة ضيوف" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="غرفة ضيوف" data-en="Guest bedroom">غرفة ضيوف</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="17" aria-label="Custom sofa">
-        <span class="gcard__im"><img src="assets/img/sofa_custom.jpg" alt="كنب مخصص" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/sofa_custom.webp" alt="كنب مخصص" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="كنب مخصص" data-en="Custom sofa">كنب مخصص</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="18" aria-label="Seating set">
-        <span class="gcard__im"><img src="assets/img/sofa_set.jpg" alt="طقم جلوس" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/sofa_set.webp" alt="طقم جلوس" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="طقم جلوس" data-en="Seating set">طقم جلوس</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="19" aria-label="Velvet armchair">
-        <span class="gcard__im"><img src="assets/img/armchair_velvet.jpg" alt="كرسي مخمل" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/armchair_velvet.webp" alt="كرسي مخمل" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="كرسي مخمل" data-en="Velvet armchair">كرسي مخمل</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="20" aria-label="Arabic majlis">
-        <span class="gcard__im"><img src="assets/img/majlis_arabic.jpg" alt="مجلس عربي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/majlis_arabic.webp" alt="مجلس عربي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مجلس عربي" data-en="Arabic majlis">مجلس عربي</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="21" aria-label="Floor majlis">
-        <span class="gcard__im"><img src="assets/img/majlis_floor.jpg" alt="مجلس أرضي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/majlis_floor.webp" alt="مجلس أرضي" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مجلس أرضي" data-en="Floor majlis">مجلس أرضي</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="22" aria-label="Dining set">
-        <span class="gcard__im"><img src="assets/img/dining_set.jpg" alt="طقم سفرة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/dining_set.webp" alt="طقم سفرة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="طقم سفرة" data-en="Dining set">طقم سفرة</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="23" aria-label="Wooden dining set">
-        <span class="gcard__im"><img src="assets/img/dining_wood_set.jpg" alt="سفرة خشبية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/dining_wood_set.webp" alt="سفرة خشبية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أثاث" data-en="Furniture">أثاث</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="سفرة خشبية" data-en="Wooden dining set">سفرة خشبية</span><span class="gcard__c" data-ar="أثاث" data-en="Furniture">أثاث</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="24" aria-label="Mashrabiya screen">
-        <span class="gcard__im"><img src="assets/img/wood_screen.jpg" alt="مشربية خشبية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wood_screen.webp" alt="مشربية خشبية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مشربية خشبية" data-en="Mashrabiya screen">مشربية خشبية</span><span class="gcard__c" data-ar="ديكور" data-en="Décor">ديكور</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="25" aria-label="Bespoke TV unit">
-        <span class="gcard__im"><img src="assets/img/tv_unit_wood.jpg" alt="وحدة تلفزيون" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/tv_unit_wood.webp" alt="وحدة تلفزيون" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="وحدة تلفزيون" data-en="Bespoke TV unit">وحدة تلفزيون</span><span class="gcard__c" data-ar="ديكور" data-en="Décor">ديكور</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="26" aria-label="Décor mirror">
-        <span class="gcard__im"><img src="assets/img/decor_mirror.jpg" alt="مرآة ديكور" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/decor_mirror.webp" alt="مرآة ديكور" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مرآة ديكور" data-en="Décor mirror">مرآة ديكور</span><span class="gcard__c" data-ar="ديكور" data-en="Décor">ديكور</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="27" aria-label="Décor vases">
-        <span class="gcard__im"><img src="assets/img/decor_vases.jpg" alt="مزهريات ديكور" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/decor_vases.webp" alt="مزهريات ديكور" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="ديكور" data-en="Décor">ديكور</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="مزهريات ديكور" data-en="Décor vases">مزهريات ديكور</span><span class="gcard__c" data-ar="ديكور" data-en="Décor">ديكور</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="28" aria-label="Modern chandelier">
-        <span class="gcard__im"><img src="assets/img/chandelier.jpg" alt="ثريا عصرية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="إضاءة" data-en="Lighting">إضاءة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/chandelier.webp" alt="ثريا عصرية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="إضاءة" data-en="Lighting">إضاءة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="ثريا عصرية" data-en="Modern chandelier">ثريا عصرية</span><span class="gcard__c" data-ar="إضاءة" data-en="Lighting">إضاءة</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="29" aria-label="Crystal chandelier">
-        <span class="gcard__im"><img src="assets/img/chandelier_crystal.jpg" alt="ثريا كريستال" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="إضاءة" data-en="Lighting">إضاءة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/chandelier_crystal.webp" alt="ثريا كريستال" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="إضاءة" data-en="Lighting">إضاءة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="ثريا كريستال" data-en="Crystal chandelier">ثريا كريستال</span><span class="gcard__c" data-ar="إضاءة" data-en="Lighting">إضاءة</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="30" aria-label="Brass wall lights">
-        <span class="gcard__im"><img src="assets/img/wall_lights_brass.jpg" alt="إضاءة جدارية نحاسية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="إضاءة" data-en="Lighting">إضاءة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/wall_lights_brass.webp" alt="إضاءة جدارية نحاسية" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="إضاءة" data-en="Lighting">إضاءة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="إضاءة جدارية نحاسية" data-en="Brass wall lights">إضاءة جدارية نحاسية</span><span class="gcard__c" data-ar="إضاءة" data-en="Lighting">إضاءة</span></span>
       </button></figure>
       <figure class="gcard" role="listitem"><button class="gcard__btn" type="button" data-i="31" aria-label="Fabric swatches">
-        <span class="gcard__im"><img src="assets/img/fabric_swatches.jpg" alt="عينات الأقمشة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أقمشة" data-en="Fabrics">أقمشة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
+        <span class="gcard__im"><img src="assets/img/fabric_swatches.webp" alt="عينات الأقمشة" loading="lazy" decoding="async" width="1024" height="1024"><span class="gcard__cat" data-ar="أقمشة" data-en="Fabrics">أقمشة</span><span class="gcard__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span></span>
         <span class="gcard__meta"><span class="gcard__t" data-ar="عينات الأقمشة" data-en="Fabric swatches">عينات الأقمشة</span><span class="gcard__c" data-ar="أقمشة" data-en="Fabrics">أقمشة</span></span>
       </button></figure>
     </div>
@@ -792,7 +805,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
 <!-- ===================== STORY SCRUB 1 — ROOM ===================== -->
 <section class="story story--room" id="storyRoom">
   <div class="story__sticky">
-    <canvas class="story__cv" id="cvRoom" data-seq="room" data-base="assets/seq/room/" data-count="60" aria-hidden="true" style="background:url('assets/poster/story-room.jpg') center/cover no-repeat"></canvas>
+    <img class="story__still" src="assets/poster/story-room.webp" alt="" width="1600" height="900" loading="lazy" decoding="async">
     <div class="story__scrim" aria-hidden="true"></div>
     <span class="story__tag" data-ar="من المقياس إلى التركيب" data-en="From measurement to installation">من المقياس إلى التركيب</span>
     <div class="story__ui">
@@ -828,7 +841,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
     </div>
     <div class="coll">
       <article class="coll__card rv">
-        <div class="coll__im"><img src="assets/img/curtain_detail.jpg" alt="ستائر فاخرة" loading="lazy" decoding="async" width="1024" height="1024"></div>
+        <div class="coll__im"><img src="assets/img/curtain_detail.webp" alt="ستائر فاخرة" loading="lazy" decoding="async" width="1024" height="1024"></div>
         <div class="coll__body">
           <h3 class="coll__t" data-ar="ستائر فاخرة" data-en="Luxury curtains">ستائر فاخرة</h3>
           <p class="coll__d" data-ar="أقمشة مستوردة تُفصَّل على قياس النافذة، بتشطيب قابل للتنظيف يناسب الاستخدام اليومي." data-en="Imported fabrics cut to your window, with a cleanable finish that suits daily use.">أقمشة مستوردة تُفصَّل على قياس النافذة، بتشطيب قابل للتنظيف يناسب الاستخدام اليومي.</p>
@@ -839,7 +852,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
         </div>
       </article>
       <article class="coll__card rv">
-        <div class="coll__im"><img src="assets/img/wardrobe_white_oak.jpg" alt="خزائن بلوط" loading="lazy" decoding="async" width="1024" height="1024"></div>
+        <div class="coll__im"><img src="assets/img/wardrobe_white_oak.webp" alt="خزائن بلوط" loading="lazy" decoding="async" width="1024" height="1024"></div>
         <div class="coll__body">
           <h3 class="coll__t" data-ar="خزائن بلوط" data-en="White-oak wardrobes">خزائن بلوط</h3>
           <p class="coll__d" data-ar="خزائن بمساحات ذكية حتى السقف، بتشطيب بلوط فاتح وإكسسوارات ناعمة الحركة." data-en="Wardrobes with smart storage up to the ceiling, in a pale oak finish with soft-close hardware.">خزائن بمساحات ذكية حتى السقف، بتشطيب بلوط فاتح وإكسسوارات ناعمة الحركة.</p>
@@ -850,7 +863,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
         </div>
       </article>
       <article class="coll__card rv">
-        <div class="coll__im"><img src="assets/img/kitchen_wood_full.jpg" alt="مطبخ خشبي" loading="lazy" decoding="async" width="1024" height="1024"></div>
+        <div class="coll__im"><img src="assets/img/kitchen_wood_full.webp" alt="مطبخ خشبي" loading="lazy" decoding="async" width="1024" height="1024"></div>
         <div class="coll__body">
           <h3 class="coll__t" data-ar="مطبخ خشبي" data-en="Bespoke wood kitchen">مطبخ خشبي</h3>
           <p class="coll__d" data-ar="مطبخ كامل من الخشب بتشطيب مقاوم للرطوبة، مصمَّم على مساحة مطبخك بالضبط." data-en="A full wood kitchen with a moisture-resistant finish, designed around your exact space.">مطبخ كامل من الخشب بتشطيب مقاوم للرطوبة، مصمَّم على مساحة مطبخك بالضبط.</p>
@@ -861,7 +874,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
         </div>
       </article>
       <article class="coll__card rv">
-        <div class="coll__im"><img src="assets/img/majlis_floor.jpg" alt="مجالس أرضية" loading="lazy" decoding="async" width="1024" height="1024"></div>
+        <div class="coll__im"><img src="assets/img/majlis_floor.webp" alt="مجالس أرضية" loading="lazy" decoding="async" width="1024" height="1024"></div>
         <div class="coll__body">
           <h3 class="coll__t" data-ar="مجالس أرضية" data-en="Floor majlis">مجالس أرضية</h3>
           <p class="coll__d" data-ar="مجالس أرضية وديكورات خشبية كاملة على القياس، مع تنسيق الإضاءة والستائر." data-en="Floor majlis and full wooden décor built to measure, with lighting and curtains styled in.">مجالس أرضية وديكورات خشبية كاملة على القياس، مع تنسيق الإضاءة والستائر.</p>
@@ -872,7 +885,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
         </div>
       </article>
       <article class="coll__card rv">
-        <div class="coll__im"><img src="assets/img/sofa_set.jpg" alt="طقم جلوس" loading="lazy" decoding="async" width="1024" height="1024"></div>
+        <div class="coll__im"><img src="assets/img/sofa_set.webp" alt="طقم جلوس" loading="lazy" decoding="async" width="1024" height="1024"></div>
         <div class="coll__body">
           <h3 class="coll__t" data-ar="طقم جلوس" data-en="Seating sets">طقم جلوس</h3>
           <p class="coll__d" data-ar="طقم جلوس مُنجَّد بأقمشة تُختار معك، مع إمكانية تعديل المقاسات والوسائد." data-en="A seating set upholstered in a fabric chosen with you, with sizes and cushions adjusted to suit.">طقم جلوس مُنجَّد بأقمشة تُختار معك، مع إمكانية تعديل المقاسات والوسائد.</p>
@@ -883,7 +896,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
         </div>
       </article>
       <article class="coll__card rv">
-        <div class="coll__im"><img src="assets/img/wall_lights_brass.jpg" alt="إضاءة جدارية" loading="lazy" decoding="async" width="1024" height="1024"></div>
+        <div class="coll__im"><img src="assets/img/wall_lights_brass.webp" alt="إضاءة جدارية" loading="lazy" decoding="async" width="1024" height="1024"></div>
         <div class="coll__body">
           <h3 class="coll__t" data-ar="إضاءة جدارية" data-en="Brass wall lights">إضاءة جدارية</h3>
           <p class="coll__d" data-ar="إضاءة نحاسية تُنسَّق مع الديكور والستائر، بدرجات حرارة لون دافئة." data-en="Brass lighting styled together with your décor and curtains, in warm colour temperatures.">إضاءة نحاسية تُنسَّق مع الديكور والستائر، بدرجات حرارة لون دافئة.</p>
@@ -900,7 +913,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
 <!-- ===================== STORY SCRUB 2 — DRAPE ===================== -->
 <section class="story story--drape" id="storyDrape">
   <div class="story__sticky">
-    <canvas class="story__cv" id="cvDrape" data-seq="drape" data-base="assets/seq/drape/" data-count="67" aria-hidden="true" style="background:url('assets/img/curtain_detail.jpg') center/cover no-repeat"></canvas>
+    <img class="story__still" src="assets/img/curtain_detail.webp" alt="" width="1600" height="900" loading="lazy" decoding="async">
     <div class="story__scrim" aria-hidden="true"></div>
     <span class="story__tag" data-ar="الأقمشة والستائر" data-en="Fabrics &amp; drapes">الأقمشة والستائر</span>
     <div class="story__ui">
@@ -928,9 +941,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
 
 <!-- ===================== MATERIALS BAND ===================== -->
 <section class="sec mat" id="materials">
-  <video class="mat__video" data-lazyvid autoplay muted loop playsinline preload="none" poster="assets/poster/loop-fabric.jpg" aria-hidden="true">
-    <source src="assets/video/loop-fabric.mp4" type="video/mp4">
-  </video>
+  <img class="mat__video" src="assets/poster/loop-fabric.webp" alt="" aria-hidden="true" width="1600" height="900" loading="lazy" decoding="async">
   <div class="mat__scrim" aria-hidden="true"></div>
   <div class="wrap mat__inner">
     <div class="rv">
@@ -955,7 +966,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
       </div>
     </div>
     <figure class="mat__fig rv">
-      <img src="assets/img/fabric_swatches.jpg" alt="عينات الأقمشة" loading="lazy" decoding="async" width="1024" height="1024">
+      <img src="assets/img/fabric_swatches.webp" alt="عينات الأقمشة" loading="lazy" decoding="async" width="1024" height="1024">
       <figcaption data-ar="عينات الأقمشة" data-en="Fabric swatches">عينات الأقمشة</figcaption>
     </figure>
   </div>
@@ -964,7 +975,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
 <!-- ===================== WOOD SCRUB BAND ===================== -->
 <section class="story story--wood" id="storyWood">
   <div class="story__sticky">
-    <canvas class="story__cv" id="cvWood" data-seq="wood" data-base="assets/seq/wood/" data-count="53" aria-hidden="true" style="background:url('assets/img/wood_cabinet.jpg') center/cover no-repeat"></canvas>
+    <img class="story__still" src="assets/img/wood_cabinet.webp" alt="" width="1600" height="900" loading="lazy" decoding="async">
     <div class="story__scrim" aria-hidden="true"></div>
     <span class="story__tag" data-ar="الورشة" data-en="The workshop">الورشة</span>
     <div class="story__ui">
@@ -1049,9 +1060,7 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
 
 <!-- ===================== WHY US ===================== -->
 <section class="sec why" id="why">
-  <video class="why__video" data-lazyvid autoplay muted loop playsinline preload="none" poster="assets/poster/loop-living.jpg" aria-hidden="true">
-    <source src="assets/video/loop-living.mp4" type="video/mp4">
-  </video>
+  <img class="why__video" src="assets/poster/loop-living.webp" alt="" aria-hidden="true" width="1600" height="900" loading="lazy" decoding="async">
   <div class="why__scrim" aria-hidden="true"></div>
   <div class="wrap why__inner">
     <div class="sec__head rv">
@@ -1424,62 +1433,22 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
   /* =========================================================
      4. HORIZONTAL GALLERY  (GSAP pin + ScrollTrigger, sticky fallback)
      ========================================================= */
-  var galSec = $("#gallery"), galTrack = $("#galTrack"), galBar = $("#galBar"), galPin = galSec ? $(".hgal__pin", galSec) : null;
-  var galST = null;
+  var galTrack = $("#galTrack"), galBar = $("#galBar");
 
-  function galDist(){
-    if(!galTrack) return 0;
-    return Math.max(0, galTrack.scrollWidth - window.innerWidth);
-  }
-  function galSign(){ return rtl() ? 1 : -1; }
   function setGalBar(p){ if(galBar) galBar.style.transform = "scaleX(" + clamp(p,0,1) + ")"; }
-
-  if(galSec && galTrack && galPin){
-    var useGSAP = hasST && !reduced;
-    if(useGSAP){
-      root.classList.add("has-gsap");
-      galST = gsap.to(galTrack, {
-        x: function(){ return galSign() * galDist(); },
-        ease: "none",
-        scrollTrigger: {
-          trigger: galSec,
-          start: "top top",
-          end: function(){ return "+=" + Math.max(1, galDist()); },
-          pin: galPin,
-          scrub: 0.6,
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-          onUpdate: function(self){ setGalBar(self.progress); }
-        }
-      });
-    } else {
-      root.classList.remove("has-gsap");
-    }
-  }
-  function refreshGallery(){
-    if(!galSec || !galTrack) return;
-    if(root.classList.contains("has-gsap")){
-      if(hasST){
-        // never let a late re-measure move the reader
-        var y0 = window.pageYOffset || root.scrollTop || 0;
-        ScrollTrigger.refresh();
-        var y1 = window.pageYOffset || root.scrollTop || 0;
-        if(Math.abs(y1 - y0) > 2) window.scrollTo(0, y0);
-      }
-      return;
-    }
-    if(reduced) return;
-    var d = galDist();
-    galSec.style.height = (window.innerHeight + d) + "px";
-    galTrack.style.transform = "translate3d(" + (galSign() * d * galProgress()) + "px,0,0)";
-  }
   function galProgress(){
-    if(!galSec) return 0;
-    var total = galSec.offsetHeight - window.innerHeight;
-    if(total <= 0) return 0;
-    var r = galSec.getBoundingClientRect();
-    return clamp((-r.top)/total, 0, 1);
+    if(!galTrack) return 0;
+    var max = galTrack.scrollWidth - galTrack.clientWidth;
+    if(max <= 0) return 0;
+    return clamp(Math.abs(galTrack.scrollLeft) / max, 0, 1);
   }
+  if(galTrack){
+    var onGalScroll = function(){ setGalBar(galProgress()); };
+    galTrack.addEventListener("scroll", onGalScroll, {passive:true});
+    window.addEventListener("resize", onGalScroll, {passive:true});
+    setTimeout(onGalScroll, 200);
+  }
+  function refreshGallery(){ setGalBar(galProgress()); }
 
   /* =========================================================
      5. FRAME SEQUENCES  (progressive load + full-bleed scrub)
@@ -1726,12 +1695,12 @@ html.no-motion .coll__card:hover .coll__im img{transform:none}
     });
   });
   [
-    ["loop-bedroom.mp4","loop-bedroom.jpg","غرفة نوم على القياس","A bedroom to measure"],
-    ["loop-living.mp4","loop-living.jpg","جلسة عائلية","A family living room"],
-    ["loop-fabric.mp4","loop-fabric.jpg","أقمشة وخامات","Fabrics &amp; finishes"],
-    ["loop-wood.mp4","loop-wood.jpg","تفاصيل خشبية","Wood detailing"]
+    ["loop-bedroom.webp","غرفة نوم على القياس","A bedroom to measure"],
+    ["loop-living.webp","جلسة عائلية","A family living room"],
+    ["loop-fabric.webp","أقمشة وخامات","Fabrics & finishes"],
+    ["loop-wood.webp","تفاصيل خشبية","Wood detailing"]
   ].forEach(function(v){
-    items.push({ type:"vid", src:"assets/video/"+v[0], poster:"assets/poster/"+v[1], ar:v[2], en:v[3] });
+    items.push({ type:"img", src:"assets/poster/"+v[0], t:v[1], c:v[2] });
   });
 
   var lb = $("#lightbox"), lbImg = $("#lbImg"), lbVid = $("#lbVid"),
